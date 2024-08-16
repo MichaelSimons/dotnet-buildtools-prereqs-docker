@@ -63,7 +63,7 @@ e
 
 3. Prepare a PR
 
-## When do images get built
+### When do images get built
 
 The images from this repository get built and published whenever one of the following occurs:
 
