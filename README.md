@@ -71,7 +71,6 @@ The images from this repository get built and published whenever one of the foll
 - The base image is updated (a new version of the image referred to by the [`FROM`](https://docs.docker.com/engine/reference/builder/#from) statement).
 
 ## How to identify the image digest
-
 The images from this repo are being [rebuilt continuously](#when-do-images-get-built).
 As such, in order to diagnose issues/regressions, it is sometimes necessary to be able to identity the specific image used in CI/Helix test runs.
 This is useful when needing to examine a previously working version of the image.
