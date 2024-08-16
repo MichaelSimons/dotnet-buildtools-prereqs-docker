@@ -54,7 +54,7 @@ It is strongly suggested to specify the `-DockerfilePath` option to avoid the ov
     ```powershell
     .\build.ps1 -DockerfilePath "*fedora/40/amd64*" -ImageBuilderCustomArgs "--dry-run"
     ```
-
+e
     Partial paths and wildcards in the `-DockerfilePath` option are also supported.  The following example will build all the Fedora Dockerfiles.
 
     ```powershell
