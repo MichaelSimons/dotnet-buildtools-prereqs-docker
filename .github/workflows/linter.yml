@@ -23,7 +23,7 @@ jobs:
           # Full git history is needed to get a proper list of changed files within `super-linter`
           fetch-depth: 0
       - name: Lint Code Base
-        uses: github/super-linter@v7 # https://github.com/github/super-linter
+        uses: github/super-linter@v7.0.0 # https://github.com/github/super-linter
         env:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
