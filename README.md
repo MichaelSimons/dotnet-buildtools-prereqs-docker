@@ -40,7 +40,7 @@ The following steps are a guideline for modifying/creating Dockerfiles.
         - Update the [CODEOWNERS](./CODEOWNERS) with the respective team code owner(s) (not individual users) for the Dockerfile(s) and list `@dotnet/dotnet-docker-reviewers` as a secondary owner.
         Team code owners must be assigned to each Dockerfile for maintenance and issue assignment purposes.
 
-1. Validate the changes locally by running [build.ps1](./build.ps1).
+2. Validate the changes locally by running [build.ps1](./build.ps1).
 It is strongly suggested to specify the `-DockerfilePath` option to avoid the overhead of building all the images.
 
     For example, if editing the [Fedora 40 Dockerfile](./src/fedora/40/amd64/Dockerfile), then run the following command to build just that Dockerfile.
@@ -61,7 +61,7 @@ It is strongly suggested to specify the `-DockerfilePath` option to avoid the ov
     .\build.ps1 -DockerfilePath "*fedora/*"
     ```
 
-1. Prepare a PR
+3. Prepare a PR
 
 ### When do images get built
 
