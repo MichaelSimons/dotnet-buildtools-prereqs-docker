@@ -40,7 +40,7 @@ The following steps are a guideline for modifying/creating Dockerfiles.
         - Update the [CODEOWNERS](./CODEOWNERS) with the respective team code owner(s) (not individual users) for the Dockerfile(s) and list `@dotnet/dotnet-docker-reviewers` as a secondary owner.
         Team code owners must be assigned to each Dockerfile for maintenance and issue assignment purposes.
 
-2. Validate the changes locally by running [build.ps1](./build.ps1).
+1. Validate the changes locally by running [build.ps1](./build.ps1).
 It is strongly suggested to specify the `-DockerfilePath` option to avoid the overhead of building all the images.
 
     For example, if editing the [Fedora 40 Dockerfile](./src/fedora/40/amd64/Dockerfile), then run the following command to build just that Dockerfile.
@@ -54,14 +54,14 @@ It is strongly suggested to specify the `-DockerfilePath` option to avoid the ov
     ```powershell
     .\build.ps1 -DockerfilePath "*fedora/40/amd64*" -ImageBuilderCustomArgs "--dry-run"
     ```
-e
+
     Partial paths and wildcards in the `-DockerfilePath` option are also supported.  The following example will build all the Fedora Dockerfiles.
 
-    ```powershells
+    ```powershell
     .\build.ps1 -DockerfilePath "*fedora/*"
     ```
 
-3. Prepare a PR
+1. Prepare a PR
 
 ### When do images get built
 
@@ -71,6 +71,7 @@ The images from this repository get built and published whenever one of the foll
 - The base image is updated (a new version of the image referred to by the [`FROM`](https://docs.docker.com/engine/reference/builder/#from) statement).
 
 ## How to identify the image digest
+
 The images from this repo are being [rebuilt continuously](#when-do-images-get-built).
 As such, in order to diagnose issues/regressions, it is sometimes necessary to be able to identity the specific image used in CI/Helix test runs.
 This is useful when needing to examine a previously working version of the image.
