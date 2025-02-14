@@ -15,6 +15,7 @@ jobs:
       - name: Run Tests
         shell: pwsh
         run: ./run-tests.ps1
+        # TODO: UX on failure is terrible, you don't see the failing test
 
       - name: Upload test results
         if: always()
