@@ -23,8 +23,12 @@
     <Using Include="Xunit" />
   </ItemGroup>
 
+
   <ItemGroup>
     <!-- Required values -->
+    <RuntimeHostConfigurationOption Include="$(MSBuildProjectName).RepoRoot">
+      <Value>$(RepoRoot)</Value>
+    </RuntimeHostConfigurationOption>
     <RuntimeHostConfigurationOption Include="$(MSBuildProjectName).SrcDirectory">
       <Value>$(SrcDirectory)</Value>
     </RuntimeHostConfigurationOption>

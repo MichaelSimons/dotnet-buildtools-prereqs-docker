@@ -10,6 +10,9 @@ internal static class Config
 {
     const string ConfigSwitchPrefix = "Microsoft.DotNet.BuildTools.Prereqs.Docker.Tests.";
 
+    public static string RepoRoot => (string)AppContext.GetData(ConfigSwitchPrefix + nameof(RepoRoot))! ?? 
+        throw new InvalidOperationException("RepoRoot must be specified");
+
     public static string SrcDirectory => (string)AppContext.GetData(ConfigSwitchPrefix + nameof(SrcDirectory))! ?? 
         throw new InvalidOperationException("SrcDirectory must be specified");
 }
